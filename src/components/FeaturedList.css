@@ -1,0 +1,13 @@
+.FeaturedList {
+    width: 100%;
+}
+
+.FeaturedList .FeaturedList-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.FeaturedList .FeaturedList-list .FeaturedList-list-item {
+    margin: 0 10px 10px 0;
+}
