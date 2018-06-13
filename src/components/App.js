@@ -5,6 +5,7 @@ import './App.css';
 import FeaturedList from '../screens/FeaturedList'
 import Category from './Category'
 import CategoryList from '../screens/CategoryList'
+import Search from '../screens/Search'
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
           <hr/>
           <Category/>
           <Route path="/category/:category" component={CategoryList}/>
+          <Route path="/search" component={Search}/>
         </div>
       </Router>
     );
