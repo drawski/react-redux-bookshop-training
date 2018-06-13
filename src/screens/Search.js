@@ -29,7 +29,9 @@ class Search extends React.Component {
       ...this.state,
       search: e.target.value
     })
-    this.props.searchBooks(this.state.search)
+    if (e.target.value.length >= 2) {
+      this.props.searchBooks(this.state.search)
+    }
   }
 
   render() {
