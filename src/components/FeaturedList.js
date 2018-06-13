@@ -24,6 +24,7 @@ class FeaturedList extends React.Component {
   render() {
     return (
       <div className="FeaturedList">
+        <h2>Featured books</h2>
         <ul className="FeaturedList-list">
           {this.props.featuredBooks.map(book => {
             return <li className="FeaturedList-list-item" key={book.id}><Book {...book}/></li>

@@ -1,0 +1,13 @@
+.CategoryList {
+    width: 100%;
+}
+
+.CategoryList .CategoryList-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.CategoryList .CategoryList-list .CategoryList-list-item {
+    margin: 0 10px 10px 0;
+}

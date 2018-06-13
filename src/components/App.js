@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 import FeaturedList from './FeaturedList'
 import Category from './Category'
+import CategoryList from './CategoryList'
 
 class App extends Component {
   render() {
@@ -11,8 +12,10 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <Category/>
         <FeaturedList/>
+        <hr/>
+        <Category/>
+        <CategoryList/>
       </div>
     );
   }
