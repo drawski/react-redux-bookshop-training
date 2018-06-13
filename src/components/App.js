@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import createStore from '../redux/configureStore'
 
+import { fetchFeaturedBooks } from '../redux/modules/featured'
+
 import './App.css';
 
 const store = createStore()
+
+store.dispatch(fetchFeaturedBooks()) // for testing purposes
 
 class App extends Component {
   render() {
