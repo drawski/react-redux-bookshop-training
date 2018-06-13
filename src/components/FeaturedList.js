@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import { fetchFeaturedBooks } from '../redux/modules/featured'
+import PropTypes from 'prop-types'
 
 import './FeaturedList.css'
 import Book from './Book'
@@ -32,5 +33,9 @@ class FeaturedList extends React.Component {
     );
   }
 }
+
+FeaturedList.propTypes = {
+  featuredBooks: PropTypes.array
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(FeaturedList);
