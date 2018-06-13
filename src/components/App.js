@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import './App.css';
-import FeaturedList from './FeaturedList'
+import FeaturedList from '../screens/FeaturedList'
 import Category from './Category'
-import CategoryList from './CategoryList'
+import CategoryList from '../screens/CategoryList'
 
 class App extends Component {
   render() {

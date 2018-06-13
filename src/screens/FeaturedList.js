@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import { fetchFeaturedBooks } from '../redux/modules/featured'
+import { fetchFeaturedBooks } from '../redux/modules/featured/index'
 import PropTypes from 'prop-types'
 
-import BookList from './BookList'
+import BookList from '../components/BookList'
 
 const mapStateToProps = state => {
   return {
