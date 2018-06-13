@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import createStore from '../redux/configureStore'
 
 import './App.css';
 
+const store = createStore()
 
 class App extends Component {
   render() {
