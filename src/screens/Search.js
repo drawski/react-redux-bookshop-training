@@ -16,11 +16,29 @@ const mapDispatchToProps = {
 }
 
 class Search extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      search: ''
+    }
+    this.onSearchChange = this.onSearchChange.bind(this)
+  }
+
+  onSearchChange(e) {
+    this.setState({
+      ...this.state,
+      search: e.target.value
+    })
+    this.props.searchBooks(this.state.search)
+  }
+
   render() {
     return (
       <div className="Search">
-        <input onChange={(e) => this.props.searchBooks(e.target.value)}/>
-        <BookList books={this.props.books}/>
+        <input value={this.state.search} onChange={this.onSearchChange}/>
+        <div className="BookList">
+          <BookList books={this.props.books}/>
+        </div>
       </div>
     );
   }
