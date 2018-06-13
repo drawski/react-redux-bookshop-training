@@ -3,8 +3,7 @@ import { connect } from 'react-redux'
 import { fetchFeaturedBooks } from '../redux/modules/featured'
 import PropTypes from 'prop-types'
 
-import './FeaturedList.css'
-import Book from './Book'
+import BookList from './BookList'
 
 const mapStateToProps = state => {
   return {
@@ -23,13 +22,9 @@ class FeaturedList extends React.Component {
 
   render() {
     return (
-      <div className="FeaturedList">
+      <div className="BookList">
         <h2>Featured books</h2>
-        <ul className="FeaturedList-list">
-          {this.props.featuredBooks.map(book => {
-            return <li className="FeaturedList-list-item" key={book.id}><Book {...book}/></li>
-          })}
-        </ul>
+        <BookList books={this.props.featuredBooks}/>
       </div>
     );
   }

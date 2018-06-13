@@ -1,13 +1,13 @@
-.CategoryList {
+.BookList {
     width: 100%;
 }
 
-.CategoryList .CategoryList-list {
+.BookList .BookList-list {
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
 }
 
-.CategoryList .CategoryList-list .CategoryList-list-item {
+.BookList .BookList-list .BookList-list-item {
     margin: 0 10px 10px 0;
 }

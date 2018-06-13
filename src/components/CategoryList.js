@@ -3,8 +3,7 @@ import { connect } from 'react-redux'
 import { fetchCategoryBooks } from '../redux/modules/category'
 import PropTypes from 'prop-types'
 
-import './CategoryList.css'
-import Book from './Book'
+import BookList from './BookList'
 
 const mapStateToProps = (state, { match }) => {
   return {
@@ -30,13 +29,9 @@ class CategoryList extends React.Component {
 
   render() {
     return (
-      <div className="CategoryList">
+      <div className="BookList">
         <h2>Books by category</h2>
-        <ul className="CategoryList-list">
-          {this.props.categoryBooks.map(book => {
-            return <li className="CategoryList-list-item" key={book.id}><Book {...book}/></li>
-          })}
-        </ul>
+        <BookList books={this.props.categoryBooks}/>
       </div>
     );
   }
