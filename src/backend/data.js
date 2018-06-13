@@ -77,4 +77,4 @@ const books = [{
     image: 'http://books.google.com/books/content?id=ArNnwDGH1fQC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api'
 }];
 
-export { books }
+export { books, cat }
