@@ -1,12 +1,9 @@
 import { createStore, combineReducers } from 'redux';
-
-const helloWorldReducer = (state, action) => {
-  return 'Hello World!'
-}
+import featuredBooksReducer from './modules/featured'
 
 export default () => createStore(
   combineReducers({
-    helloWorld: helloWorldReducer
+    featuredBooks: featuredBooksReducer
   }),
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
