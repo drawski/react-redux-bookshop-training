@@ -6,9 +6,10 @@ import PropTypes from 'prop-types'
 import './CategoryList.css'
 import Book from './Book'
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, { match }) => {
   return {
-    categoryBooks: state.categoryBooks
+    categoryBooks: state.categoryBooks,
+    category: match.params.category
   }
 }
 
@@ -18,7 +19,13 @@ const mapDispatchToProps = {
 
 class CategoryList extends React.Component {
   componentDidMount() {
-    this.props.fetchCategoryBooks()
+    this.props.fetchCategoryBooks(this.props.category)
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.category !== this.props.category) {
+      this.props.fetchCategoryBooks(this.props.category)
+    }
   }
 
   render() {
@@ -42,6 +49,7 @@ CategoryList.propTypes = {
       title: PropTypes.string
     })
   ),
+  category: PropTypes.string,
   fetchCategoryBooks: PropTypes.func
 };
 
