@@ -40,7 +40,8 @@ FeaturedList.propTypes = {
       id: PropTypes.number,
       title: PropTypes.string
     })
-  )
+  ),
+  fetchFeaturedBooks: PropTypes.func
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(FeaturedList);
