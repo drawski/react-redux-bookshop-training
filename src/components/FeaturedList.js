@@ -35,7 +35,12 @@ class FeaturedList extends React.Component {
 }
 
 FeaturedList.propTypes = {
-  featuredBooks: PropTypes.array
+  featuredBooks: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      title: PropTypes.string
+    })
+  )
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(FeaturedList);
